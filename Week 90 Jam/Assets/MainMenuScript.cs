@@ -17,6 +17,6 @@ public class MainMenuScript : MonoBehaviour
         
     }
     public void loadGame(){
-        SceneManagement.LoadScene("Level01");
+       SceneManager.LoadScene("Level01");
     }
 }
