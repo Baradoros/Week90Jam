@@ -320,6 +320,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1718920121}
   - {fileID: 1728486685}
   - {fileID: 1971694791}
   - {fileID: 2059492177}
@@ -548,7 +549,7 @@ MonoBehaviour:
   disableButtonInterval: 0.4
   useOnPointerEnter: 1
   onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
+  onPointerEnterSound: Tick
   customOnPointerEnterSound: 0
   OnPointerEnter:
     m_PersistentCalls:
@@ -1892,7 +1893,7 @@ MonoBehaviour:
   disableButtonInterval: 0.4
   useOnPointerEnter: 1
   onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
+  onPointerEnterSound: Tick
   customOnPointerEnterSound: 0
   OnPointerEnter:
     m_PersistentCalls:
@@ -3861,7 +3862,7 @@ MonoBehaviour:
   disableButtonInterval: 0.4
   useOnPointerEnter: 1
   onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
+  onPointerEnterSound: Tick
   customOnPointerEnterSound: 0
   OnPointerEnter:
     m_PersistentCalls:
@@ -5126,7 +5127,7 @@ MonoBehaviour:
   disableButtonInterval: 0.4
   useOnPointerEnter: 1
   onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
+  onPointerEnterSound: Tick
   customOnPointerEnterSound: 0
   OnPointerEnter:
     m_PersistentCalls:
@@ -5775,9 +5776,13 @@ MonoBehaviour:
       m_Value: 0
   onClickGameEvents: []
   onClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
+    addToNavigationHistory: 1
+    show:
+    - category: Main Menu
+      name: Options
+    hide:
+    - category: Main Menu
+      name: Main Screen
   useOnDoubleClick: 0
   waitForOnDoubleClickAnimation: 1
   doubleClickRegisterInterval: 0.2
@@ -6485,6 +6490,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717935857}
   m_CullTransparentMesh: 0
+--- !u!1 &1718920120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1718920121}
+  - component: {fileID: 1718920124}
+  - component: {fileID: 1718920123}
+  - component: {fileID: 1718920122}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1718920121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718920120}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 17356352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1718920122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718920120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416d1b88f605d1346b10fa8fc191de1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugGameEvents: 0
+  debugUIButtons: 0
+  debugUIElements: 0
+  debugUINotifications: 0
+  debugUICanvases: 0
+  autoDisableButtonClicks: 1
+  gamePaused: 0
+  currentGameTimeScale: 1
+  isSoundOn: 1
+  isMusicOn: 1
+  backButtonInputMode: 2
+  enableBackButtonAlternateInputs: 0
+  backButtonKeyCode: 27
+  backButtonKeyCodeAlt: 8
+  backButtonVirtualButtonName: Cancel
+  backButtonVirtualButtonNameAlt: Cancel
+  currentOrientation: 2
+  useTextMeshPro: 0
+--- !u!114 &1718920123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718920120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96124914bff0e8c4a860edd2b48124e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotificationItems: []
+--- !u!114 &1718920124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718920120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490c78ed3279eba42a5f8a5fe316e81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixerGroup: {fileID: 0}
+  masterVolume: 0.3
+  masterPitch: 1
+  numberOfChannels: 20
 --- !u!1 &1725479523
 GameObject:
   m_ObjectHideFlags: 0
@@ -6594,7 +6691,7 @@ RectTransform:
   - {fileID: 199664857}
   - {fileID: 9085725}
   m_Father: {fileID: 17356352}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7013,7 +7110,7 @@ MonoBehaviour:
   disableButtonInterval: 0.4
   useOnPointerEnter: 1
   onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
+  onPointerEnterSound: Tick
   customOnPointerEnterSound: 0
   OnPointerEnter:
     m_PersistentCalls:
@@ -8278,7 +8375,7 @@ MonoBehaviour:
   disableButtonInterval: 0.4
   useOnPointerEnter: 1
   onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
+  onPointerEnterSound: Tick
   customOnPointerEnterSound: 0
   OnPointerEnter:
     m_PersistentCalls:
@@ -9450,7 +9547,7 @@ RectTransform:
   - {fileID: 1458980136}
   - {fileID: 1490700924}
   m_Father: {fileID: 17356352}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9919,7 +10016,7 @@ RectTransform:
   - {fileID: 273694976}
   - {fileID: 1835196620}
   m_Father: {fileID: 17356352}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
