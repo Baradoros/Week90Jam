@@ -37,6 +37,7 @@ sysinfo.txt
 
 # IDE related
 .idea/
+[Aa]ssets/[Pp]lugins/[Ee]ditor/JetBrains
 
 # Mac Files
 .DS_Store
