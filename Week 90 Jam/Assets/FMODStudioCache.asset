@@ -16,12 +16,13 @@ MonoBehaviour:
   - {fileID: 114031313298746786}
   - {fileID: 114180154490931558}
   EditorEvents:
-  - {fileID: 114002864934551074}
+  - {fileID: 114363025814061948}
+  - {fileID: 114596573385639904}
   MasterBanks:
   - {fileID: 114180154490931558}
   StringsBanks:
   - {fileID: 114031313298746786}
-  stringsBankWriteTime: 636894579420000000
+  stringsBankWriteTime: 636894745770000000
   cacheVersion: 3
 --- !u!114 &114002864934551074
 MonoBehaviour:
@@ -59,11 +60,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: W90_fmod/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636894579420000000
+  lastModified: 636894745770000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 746
+    Value: 900
   Exists: 1
 --- !u!114 &114180154490931558
 MonoBehaviour:
@@ -79,9 +80,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/seanlange/GameDev/Games/Week90Jam/Week 90 Jam/W90_fmod/Build/Desktop/Master
     Bank.bank
-  lastModified: 636894579420000000
+  lastModified: 636894745770000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 122496
+    Value: 173184
   Exists: 1
+--- !u!114 &114363025814061948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test/Test_Music
+  guid: 5d200abf6c25a942a9af688a08773957
+  Banks:
+  - {fileID: 114180154490931558}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12800
+--- !u!114 &114596573385639904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Test/Test_SFX
+  guid: a547dd9aa563cd479c5fb7b12243c3fe
+  Banks:
+  - {fileID: 114180154490931558}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
