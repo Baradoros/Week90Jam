@@ -554,8 +554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 116.2}
-  m_SizeDelta: {x: 479, y: 47.6}
+  m_AnchoredPosition: {x: -0.000030518, y: 116}
+  m_SizeDelta: {x: 495.4, y: 47.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701437325
 MonoBehaviour:
@@ -590,7 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GAME TITLE
+  m_Text: GAME TITLE - BUY MARS WARS
 --- !u!222 &701437326
 CanvasRenderer:
   m_ObjectHideFlags: 0
