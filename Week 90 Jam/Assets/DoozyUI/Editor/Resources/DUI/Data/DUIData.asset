@@ -53,12 +53,31 @@ MonoBehaviour:
         m_Target: 0
         speed: 2
         m_Value: 0
+    - categoryName: Main Menu
+      itemNames:
+      - Instructions
+      - Main Screen
+      - Options
+      - Scene Select
+      isExpanded:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+    - categoryName: Uncategorized
+      itemNames:
+      - ~Element Name~
+      isExpanded:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
     categoryNames:
     - ~Custom Name~
     - Example 1 - SimpleScene
     - Example 2 - OrientationManager
     - Example 3 - Buttons
     - Example 4 - Simple UI
+    - Main Menu
+    - Uncategorized
   DatabaseUIButtons:
     categories:
     - categoryName: Example 1 - SimpleScene
@@ -99,12 +118,31 @@ MonoBehaviour:
         m_Target: 0
         speed: 2
         m_Value: 0
+    - categoryName: Main Menu
+      itemNames:
+      - ApplicationQuit
+      - Instructions
+      - Options
+      - Play
+      isExpanded:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+    - categoryName: Uncategorized
+      itemNames:
+      - ~Button Name~
+      isExpanded:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
     categoryNames:
     - ~Custom Name~
     - Example 1 - SimpleScene
     - Example 2 - OrientationManager
     - Example 3 - Buttons
     - Example 4 - Simple UI
+    - Main Menu
+    - Uncategorized
   DatabaseUICanvases:
   - MasterCanvas
   DatabaseUISounds:
@@ -344,9 +382,9 @@ MonoBehaviour:
       - SlenderRight
       - SlenderUp
       isExpanded:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
     - categoryName: Slide
       presets:
       - {fileID: 11400000, guid: a0fdb12db8f7b334b8a8ca73ea249d4d, type: 2}
@@ -396,9 +434,9 @@ MonoBehaviour:
       presetNames:
       - DefaultPreset
       isExpanded:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
     categoryNames:
     - Basic
     - Drop
@@ -1272,4 +1310,4 @@ MonoBehaviour:
         speed: 2
         m_Value: 0
     categoryNames:
-    - 
+    - Uncategorized
