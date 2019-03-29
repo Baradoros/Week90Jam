@@ -121,6 +121,7 @@ MonoBehaviour:
     - categoryName: Main Menu
       itemNames:
       - ApplicationQuit
+      - Back
       - Instructions
       - Options
       - Play
