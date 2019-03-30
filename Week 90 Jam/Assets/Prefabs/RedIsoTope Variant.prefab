@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 1701398853001858454, guid: dee51bf3c91462a4aa877d498f162044,
         type: 3}
       propertyPath: m_Name
-      value: RedIsoTope
+      value: RedIsoTope Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701398853001858454, guid: dee51bf3c91462a4aa877d498f162044,
+        type: 3}
+      propertyPath: m_TagString
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 1701398853001499062, guid: dee51bf3c91462a4aa877d498f162044,
         type: 3}
