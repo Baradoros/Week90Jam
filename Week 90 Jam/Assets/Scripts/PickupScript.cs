@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PickupScript : MonoBehaviour
 {
-    public int isotopes;
+    public int Red;
+    public int Green;
+    public int Blue;
     public GameObject isotopeobj;
     public Vector3 offset;
     public GameObject placementobj;
@@ -25,8 +27,16 @@ public class PickupScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision col){
         if((mask.value & 1<<col.gameObject.layer) == 1<<col.gameObject.layer){
-        if(col.gameObject.tag == "isotope"){
-            isotopes += 1;
+        if(col.gameObject.tag == "Red"){
+            Red += 1;
+            Destroy(col.gameObject);
+        }
+        else if(col.gameObject.tag == "Blue"){
+            Blue += 1;
+            Destroy(col.gameObject);
+        }
+        else if(col.gameObject.tag == "Green"){
+            Green += 1;
             Destroy(col.gameObject);
         }
         }
