@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{adb99b9e-9258-4d00-8c57-f41a1092e608}">
+        <property name="assetPath">
+            <value>1384[kb]tremelo-pad-twochords.wav.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>22.0499992</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>16.143673469387757</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{0de24930-1980-4f71-ad51-eb6fe52d7190}</destination>
+        </relationship>
+    </object>
+</objects>
