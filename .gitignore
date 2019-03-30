@@ -53,3 +53,10 @@ fmod_editor.log
 /FMOD/**.unsaved
 /FMOD/**.cache
 /FMOD/**.restore
+
+# Custom
+/Builds/**
+/Data/**
+/SHFB/Help/**
+/Assets/Temp/**
+/Assets/Temp.meta
