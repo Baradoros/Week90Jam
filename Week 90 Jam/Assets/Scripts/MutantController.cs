@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MutantController : MonoBehaviour
 {
+    [Header("Which player is this?")]
+    [SerializeField]
+    private int playerNumber = 1;
+    [Space]
+
     public Rigidbody rb;
     public Vector3 direction;
     public float speed;
@@ -19,8 +24,8 @@ public class MutantController : MonoBehaviour
     void Update()
     {
         
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
+        float moveHorizontal = Input.GetAxisRaw("Horizontal" + playerNumber);
+        float moveVertical = Input.GetAxisRaw("Vertical" + playerNumber);
         direction = new Vector3(0,0,0);
         direction = new Vector3(moveHorizontal, 0, moveVertical);
         //LOOK
