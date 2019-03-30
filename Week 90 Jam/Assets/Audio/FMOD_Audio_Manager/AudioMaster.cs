@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioMaster : MonoBehaviour
 {
-    private static AudioMaster instance;
+    public static AudioMaster instance;
 
     [SerializeField, EventRef] private string testSFX;
     [SerializeField] private EventInstance SFXVolumeTestEvent;
