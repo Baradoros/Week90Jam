@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Test/Test_Music
+  Event: event:/MUSIC/Test_Music
   PlayEvent: 1
   StopEvent: 2
   CollisionTag: 
@@ -10994,7 +10994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451a3acab33e74513ae6c3cd98c96fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testSFX: event:/Test/Test_SFX
+  testSFX: event:/SFX/Test_SFX
   masterVolume: 1
   musicVolume: 1
   sfxVolume: 1
