@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 4459278058233300601, guid: 0ccf61fba26ba844dabeb7b47fe72c87,
         type: 3}
       propertyPath: m_Name
-      value: GeenIsoTope
+      value: GeenIsoTope Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459278058233300601, guid: 0ccf61fba26ba844dabeb7b47fe72c87,
+        type: 3}
+      propertyPath: m_TagString
+      value: Green
       objectReference: {fileID: 0}
     - target: {fileID: 4459278058233731673, guid: 0ccf61fba26ba844dabeb7b47fe72c87,
         type: 3}
