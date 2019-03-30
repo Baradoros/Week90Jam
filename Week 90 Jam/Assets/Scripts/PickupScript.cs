@@ -8,6 +8,7 @@ public class PickupScript : MonoBehaviour
     public GameObject isotopeobj;
     public Vector3 offset;
     public GameObject placementobj;
+    public LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +24,11 @@ public class PickupScript : MonoBehaviour
         }
     }
     void OnCollisionEnter(Collision col){
+        if((mask.value & 1<<col.gameObject.layer) == 1<<col.gameObject.layer){
         if(col.gameObject.tag == "isotope"){
             isotopes += 1;
             Destroy(col.gameObject);
+        }
         }
     }
 }

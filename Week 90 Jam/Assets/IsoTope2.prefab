@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4459278058233731665}
   - component: {fileID: 4459278058230340209}
   - component: {fileID: 4459278058231306417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4459278058233731667}
   - component: {fileID: 4459278058230340211}
   - component: {fileID: 4459278058231306419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4459278058233731669}
   - component: {fileID: 4459278058230340213}
   - component: {fileID: 4459278058231306421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4459278058233731671}
   - component: {fileID: 4459278058230340215}
   - component: {fileID: 4459278058231306423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 4459278058233731673}
   - component: {fileID: 4459278058223957425}
   - component: {fileID: 4459278058233331923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IsoTope2
   m_TagString: isotope
   m_Icon: {fileID: 0}
