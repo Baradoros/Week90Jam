@@ -25,7 +25,7 @@ public class MutantController : MonoBehaviour
     {
         
         float moveHorizontal = Input.GetAxisRaw("Horizontal" + playerNumber);
-        float moveVertical = Input.GetAxisRaw("Vertical" + playerNumber);
+        float moveVertical = -Input.GetAxisRaw("Vertical" + playerNumber);
         direction = new Vector3(0,0,0);
         direction = new Vector3(moveHorizontal, 0, moveVertical);
         //LOOK
