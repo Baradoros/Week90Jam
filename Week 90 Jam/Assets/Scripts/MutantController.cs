@@ -31,6 +31,9 @@ public class MutantController : MonoBehaviour
         //LOOK
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
         rb.transform.rotation = Quaternion.LookRotation(-movement);
+        if(Input.GetButtonDown("UP")){
+            Debug.Log("LOG");
+        }
     }
     void FixedUpdate(){
         rb.transform.position += direction * speed * Time.deltaTime;
