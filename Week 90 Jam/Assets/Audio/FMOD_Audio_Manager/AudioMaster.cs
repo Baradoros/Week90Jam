@@ -20,8 +20,6 @@ public class AudioMaster : MonoBehaviour
     private const string masterVolumePrefString = "Master_Volume";
     private const string musicVolumePrefString = "Music_Volume";
     private const string sfxVolumePrefString = "SFX_Volume";
-
-    //public AudioManager audioManager;
     
     private void Awake()
     {
@@ -32,15 +30,6 @@ public class AudioMaster : MonoBehaviour
 
     private void Start()
     {
-//        if (audioManager == null)
-//        {
-//            Debug.Log("No Audio Manager Available");
-//            return;
-//        }
-//        
-//        audioManager.gameObject.SetActive(true);
-//        audioManager.gameObject.SetActive(false);
-
         // Establish the busses to be loaded and managed
         masterBus = RuntimeManager.GetBus("bus:/Main");
         musicBus = RuntimeManager.GetBus("bus:/Main/Music");
@@ -70,11 +59,6 @@ public class AudioMaster : MonoBehaviour
         PlayerPrefs.SetFloat(musicVolumePrefString, musicVolume);
         
         SetSfxVolume(sfxVolume);
-        
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape))
-        {
-            //audioManager.gameObject.SetActive(!audioManager.isActiveAndEnabled);
-        }
     }
 
     public void SetMasterVolume(float value)
@@ -94,10 +78,10 @@ public class AudioMaster : MonoBehaviour
         sfxBus.setVolume(sfxVolume);
         PlayerPrefs.SetFloat(sfxVolumePrefString, sfxVolume);
         
-        SFXVolumeLevel(sfxVolume);
+        SFXVolumeLevel();
     } 
 
-    public void SFXVolumeLevel(float newSFXVolume)
+    private void SFXVolumeLevel()
     {
         if (oldSfxVolume == sfxVolume) return;
         
