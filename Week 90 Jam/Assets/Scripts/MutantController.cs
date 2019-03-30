@@ -18,9 +18,14 @@ public class MutantController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
         direction = new Vector3(0,0,0);
-        direction = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-       
+        direction = new Vector3(moveHorizontal, 0, moveVertical);
+        //LOOK
+        Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
+        rb.transform.rotation = Quaternion.LookRotation(-movement);
     }
     void FixedUpdate(){
         rb.transform.position += direction * speed * Time.deltaTime;
