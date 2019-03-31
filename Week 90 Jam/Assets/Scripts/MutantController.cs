@@ -7,6 +7,10 @@ public class MutantController : MonoBehaviour
     [Header("Which player is this?")]
     [SerializeField]
     private int playerNumber = 1;
+
+    [Header("Work Variables")]
+    public GameObject CollisionCube;
+    public LayerMask StationMask;
     [Space]
 
     public Rigidbody rb;
@@ -30,8 +34,27 @@ public class MutantController : MonoBehaviour
         direction = new Vector3(moveHorizontal, 0, moveVertical);
         //LOOK
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-        rb.transform.rotation = Quaternion.LookRotation(-movement);
+        if(movement != new Vector3(0, 0, 0))
+            rb.transform.rotation = Quaternion.LookRotation(-movement);
+
+
+        //Do Work On Station
+        if (Input.GetAxisRaw("Action" + playerNumber) > 0)
+        {
+            Station station = null;
+
+            foreach (GameObject collision in CollisionCube.GetComponent<CollisionCube>().CollidingGameObjects)
+                if ((StationMask.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer)
+                {
+                    station = collision.GetComponent<Station>();
+                    break;
+                }
+
+            if (station != null && station.CheckRequirements())
+                station.DoWork();
+        }
     }
+
     void FixedUpdate(){
         rb.transform.position += direction * speed * Time.deltaTime;
     }

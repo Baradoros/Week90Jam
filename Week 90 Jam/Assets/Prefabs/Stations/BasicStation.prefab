@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8049209781393194243
+--- !u!1 &8790069781687471271
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8049209781393194240}
-  - component: {fileID: 8049209781393194271}
-  - component: {fileID: 8049209781393194270}
-  - component: {fileID: 8049209781393194241}
-  - component: {fileID: 4812963384632963069}
+  - component: {fileID: 8790069781687471268}
+  - component: {fileID: 8790069781687471291}
+  - component: {fileID: 8790069781687471290}
+  - component: {fileID: 8790069781687471269}
+  - component: {fileID: 2586073862108434047}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -20,35 +20,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8049209781393194240
+--- !u!4 &8790069781687471268
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781393194243}
+  m_GameObject: {fileID: 8790069781687471271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8049209781490706150}
+  m_Father: {fileID: 8790069781860489026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8049209781393194271
+--- !u!33 &8790069781687471291
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781393194243}
+  m_GameObject: {fileID: 8790069781687471271}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8049209781393194270
+--- !u!23 &8790069781687471290
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781393194243}
+  m_GameObject: {fileID: 8790069781687471271}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,26 +79,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8049209781393194241
+--- !u!65 &8790069781687471269
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781393194243}
+  m_GameObject: {fileID: 8790069781687471271}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4812963384632963069
+--- !u!114 &2586073862108434047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781393194243}
+  m_GameObject: {fileID: 8790069781687471271}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f598a3a394075c9408c1a98f48589191, type: 3}
@@ -106,10 +106,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LayerMasks:
   - serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   MaskIDs: 
   CollidingGameObjects: []
---- !u!1 &8049209781490706156
+--- !u!1 &8790069781860489032
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,50 +117,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8049209781490706150}
-  - component: {fileID: 8049209781490706153}
-  - component: {fileID: 8049209781490706152}
-  - component: {fileID: 8049209781490706155}
-  - component: {fileID: 8049209781490706154}
-  - component: {fileID: 8049209781490706157}
-  - component: {fileID: 8049209781490706151}
-  m_Layer: 10
-  m_Name: Mutant
+  - component: {fileID: 8790069781860489026}
+  - component: {fileID: 8790069781860489037}
+  - component: {fileID: 8790069781860489036}
+  - component: {fileID: 8790069781860489039}
+  - component: {fileID: 8790069781860489038}
+  - component: {fileID: 7731618456641963035}
+  m_Layer: 9
+  m_Name: BasicStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8049209781490706150
+--- !u!4 &8790069781860489026
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
+  m_GameObject: {fileID: 8790069781860489032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.73, z: 1}
   m_Children:
-  - {fileID: 8049209781393194240}
+  - {fileID: 8790069781687471268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8049209781490706153
+--- !u!33 &8790069781860489037
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
+  m_GameObject: {fileID: 8790069781860489032}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8049209781490706152
+--- !u!23 &8790069781860489036
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
+  m_GameObject: {fileID: 8790069781860489032}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -191,13 +190,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &8049209781490706155
+--- !u!136 &8790069781860489039
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
+  m_GameObject: {fileID: 8790069781860489032}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -205,13 +204,13 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &8049209781490706154
+--- !u!54 &8790069781860489038
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
+  m_GameObject: {fileID: 8790069781860489032}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -219,48 +218,26 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &8049209781490706157
+--- !u!114 &7731618456641963035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
+  m_GameObject: {fileID: 8790069781860489032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be69c72a7fae8d549b8be61f3da73330, type: 3}
+  m_Script: {fileID: 11500000, guid: aa58c608ffe32df43b69ec6a5a27c595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 1
-  CollisionCube: {fileID: 8049209781393194243}
-  StationMask:
+  CollisionCube: {fileID: 8790069781687471271}
+  PlayerMask:
     serializedVersion: 2
-    m_Bits: 512
-  rb: {fileID: 8049209781490706154}
-  direction: {x: 0, y: 0, z: 0}
-  speed: 10
-  velz: 0
---- !u!114 &8049209781490706151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049209781490706156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ded66fe56552bd541bebb8f2bcc06370, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Red: 0
-  Green: 0
-  Blue: 0
-  isotopeobj: {fileID: 4459278058233300601, guid: 0ccf61fba26ba844dabeb7b47fe72c87,
-    type: 3}
-  offset: {x: 0, y: 0, z: 5.22}
-  placementobj: {fileID: 8049209781393194243}
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
+  RechargeTime: 1
+  WorkTime: 1
+  RetainProgress: 0
+  Progress: 0
+  IsFinished: 0
