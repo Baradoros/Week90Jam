@@ -9,10 +9,10 @@ public class MissionCheckStation : Station
     {
         if (!isUsable) return false;
         
-        CollisionCube cCube = CollisionCube.GetComponent<CollisionCube>();
+        CollisionCube cCube = collisionCube.GetComponent<CollisionCube>();
 
         foreach (GameObject go in cCube.CollidingGameObjects)
-            if ((PlayerMask.value & 1 << go.gameObject.layer) == 1 << go.gameObject.layer)
+            if ((playerMask.value & 1 << go.gameObject.layer) == 1 << go.gameObject.layer)
                 return true;
 
         return false;

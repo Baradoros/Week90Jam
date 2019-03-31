@@ -7,57 +7,45 @@ using UnityEngine;
 public abstract class Station : MonoBehaviour
 {
     [Header("Prefab Variables")]
-    public GameObject CollisionCube;
-    public LayerMask PlayerMask;
+    public GameObject collisionCube;
+    public LayerMask playerMask;
 
     [Header("Work Variables")]
-    public float RechargeTime;
-    public float WorkTime;
+    public float rechargeTime;
+    public float workTime;
 
     [Space]
-    public float Progress; //Out of 1
-    public bool IsFinished = false;
+    public float progress; //Out of 1
+    public bool isFinished = false;
 
     [HideInInspector]
-    public bool HasWorkedThisFrame = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool hasWorkedThisFrame = false;
 
     void FixedUpdate()
     {
         Recharge();
 
-        if (HasWorkedThisFrame)
-            HasWorkedThisFrame = false;
+        if (hasWorkedThisFrame)
+            hasWorkedThisFrame = false;
         else
             DoIdleWork();
     }
 
     public virtual void DoWork()
     {
-        if (!IsFinished)
+        if (!isFinished)
         {
-            if (WorkTime == 0)
-                Progress = 1;
+            if (workTime == 0)
+                progress = 1;
             else
-                Progress += (Time.deltaTime / WorkTime);
+                progress += (Time.deltaTime / workTime);
 
-            Debug.Log(Progress);
+            Debug.Log(progress);
 
-            if (Progress >= 1)
+            if (progress >= 1)
             {
-                IsFinished = true;
-                Progress = 1;
+                isFinished = true;
+                progress = 1;
 
                 DoWorkResult();
             }
@@ -68,24 +56,24 @@ public abstract class Station : MonoBehaviour
 
     public virtual void Recharge()
     {
-        if(IsFinished)
+        if(isFinished)
         {
-            if (RechargeTime == 0)
-                Progress = 0;
+            if (rechargeTime == 0)
+                progress = 0;
             else
-                Progress -= (Time.deltaTime / RechargeTime);
+                progress -= (Time.deltaTime / rechargeTime);
 
-            if(Progress <= 0)
+            if(progress <= 0)
             {
-                IsFinished = false;
-                Progress = 0;
+                isFinished = false;
+                progress = 0;
             }
         }
     }
     
     public virtual void JustCheck()
     {
-        IsFinished = true;
+        isFinished = true;
         DoWorkResult();
         Debug.Log("Recharging");
     }

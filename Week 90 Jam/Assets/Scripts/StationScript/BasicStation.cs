@@ -4,10 +4,10 @@ public class BasicStation : Station
 {
     public override bool CheckRequirements()
     {
-        CollisionCube cCube = CollisionCube.GetComponent<CollisionCube>();
+        CollisionCube cCube = collisionCube.GetComponent<CollisionCube>();
 
         foreach (GameObject go in cCube.CollidingGameObjects)
-            if ((PlayerMask.value & 1 << go.gameObject.layer) == 1 << go.gameObject.layer)
+            if ((playerMask.value & 1 << go.gameObject.layer) == 1 << go.gameObject.layer)
                 return true;
 
         return false;
@@ -18,9 +18,12 @@ public class BasicStation : Station
         Debug.Log("WORKDONE!");
 
         var giveObjective = GetComponent<ObjectiveGiver>();
-        if (giveObjective != null)
-        {
-            giveObjective.GiveObjectiveToPlayer();
-        }
+        //if (giveObjective != null)
+        //{
+        //    giveObjective.GiveObjectiveToPlayer();
+        //}
+        //
+        // Condensed all of this to the below line
+        giveObjective?.GiveObjectiveToPlayer();
     }
 }
