@@ -11,21 +11,15 @@ public class CollisionCube : MonoBehaviour
     [HideInInspector]
     public List<GameObject> CollidingGameObjects;
 
-    // Start is called before the first frame update
     void Start()
     {
         CollidingGameObjects = new List<GameObject>();
 
         MaskIDs = new List<int>();
         //JUST REALIZED HOW MASK VALUES WORK!!! I will redo this and make it better. I am ashamed.
+        // Bardoros: https://giphy.com/gifs/pDsCoECKh1Pa
         foreach (LayerMask mask in LayerMasks)
             MaskIDs.Add((int) Mathf.Log(mask.value, 2));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter(Collider coll)
