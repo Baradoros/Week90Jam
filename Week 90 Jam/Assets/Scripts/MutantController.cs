@@ -35,9 +35,6 @@ public class MutantController : MonoBehaviour
         //LOOK
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
 
-        if(movement != new Vector3(0, 0, 0))
-            rb.transform.rotation = Quaternion.LookRotation(-movement);
-
         if (moveHorizontal != 0 || moveVertical != 0)
             rb.transform.rotation = Quaternion.LookRotation(-movement);
         if (Input.GetButtonDown("UP"))
@@ -59,9 +56,6 @@ public class MutantController : MonoBehaviour
                 station.DoWork();
         
         }
-        
-        if(Input.GetButtonDown("UP"))
-            Debug.Log("LOG");
     }
     
 
