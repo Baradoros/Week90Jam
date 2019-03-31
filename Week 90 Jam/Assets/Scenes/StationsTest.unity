@@ -399,16 +399,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mutant
       objectReference: {fileID: 0}
-    - target: {fileID: 8049209781490706156, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049209781490706156, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8049209781490706150, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,21 +453,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049209781393194243, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049209781393194241, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049209781393194241, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de9bfd4e71d2f4d863b9a20216e16c, type: 3}
