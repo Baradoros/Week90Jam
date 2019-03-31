@@ -17,6 +17,7 @@ public class CollisionCube : MonoBehaviour
         CollidingGameObjects = new List<GameObject>();
 
         MaskIDs = new List<int>();
+        //JUST REALIZED HOW MASK VALUES WORK!!! I will redo this and make it better. I am ashamed.
         foreach (LayerMask mask in LayerMasks)
             MaskIDs.Add((int) Mathf.Log(mask.value, 2));
     }
