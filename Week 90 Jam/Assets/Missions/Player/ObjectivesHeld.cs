@@ -25,7 +25,7 @@ public class ObjectivesHeld : MonoBehaviour
     {
         foreach (ObjectiveData objectiveData in Objectives)
         {
-            var oCard = Instantiate(objectivePrefab, transform.position, transform.rotation, objCardsPanel);
+            var oCard = Instantiate(objectivePrefab, transform.position, Quaternion.identity, objCardsPanel);
             oCard.name = objectiveData.name + " added"; // debug
             oCard.GetComponent<Image>().sprite = objectiveData.objectiveSprite;
         }
