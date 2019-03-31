@@ -12,9 +12,15 @@ public class ObjectivesHeld : MonoBehaviour
     
     private void Start()
     {
-        BuildObjectivesHeld();
+        UpdateObjectivesVisual();
     }
 
+    public void AddObjective(ObjectiveData oD)
+    {
+        Objectives.Add(oD);
+        UpdateObjectivesVisual();
+    }
+    
     private void BuildObjectivesHeld()
     {
         foreach (ObjectiveData objectiveData in Objectives)
@@ -36,6 +42,8 @@ public class ObjectivesHeld : MonoBehaviour
 
     public void UpdateObjectivesVisual()
     {
+        if (!objCardsPanel) return;
+        
         ClearObjectivesHeldVisual();
         BuildObjectivesHeld();
     }

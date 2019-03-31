@@ -1,21 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BasicStation : Station
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override bool CheckRequirements()
     {
         CollisionCube cCube = CollisionCube.GetComponent<CollisionCube>();
@@ -30,5 +16,11 @@ public class BasicStation : Station
     public override void DoWorkResult()
     {
         Debug.Log("WORKDONE!");
+
+        var giveObjective = GetComponent<ObjectiveGiver>();
+        if (giveObjective != null)
+        {
+            giveObjective.GiveObjectiveToPlayer();
+        }
     }
 }
