@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a568c41650b34ffb8f153986ed49751, type: 3}
-  m_Name: Obj 001
+  m_Name: Reactor
   m_EditorClassIdentifier: 
-  isComplete: 0
-  objectiveTitle: A
+  objectiveTitle: Reactor
+  objectiveSprite: {fileID: 21300000, guid: b5df01ce2f5034e1d8a772974c34c173, type: 3}

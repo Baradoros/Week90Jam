@@ -1,13 +1,40 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mission : MonoBehaviour
 {
+    [Header("Mission Info")]
+    public string missionTitle;
+    public TextMeshProUGUI missionTitleText;
     public bool isComplete;
-    public List<ObjectiveData> Objectives = new List<ObjectiveData>();
     
+    [Header("Objectives Info")]
+    public GameObject objectivePrefab;
+    public Transform objCardsPanel;
+    public List<ObjectiveData> Objectives = new List<ObjectiveData>();
+
+
+    private void Start()
+    {
+        missionTitleText.text = missionTitle;
+        BuildMissionCard();
+    }
+
+    private void BuildMissionCard()
+    {
+        foreach (ObjectiveData objectiveData in Objectives)
+        {
+            var oCard = Instantiate(objectivePrefab, transform.position, transform.rotation, objCardsPanel);
+            oCard.name = objectiveData.name + " added"; // debug
+            oCard.GetComponent<Image>().sprite = objectiveData.objectiveSprite;
+
+        }
+    }
+
     // iterate through the players objectives, see if the player is holding a matching this mission
     // if they are holding one, it is queued for deletion from their holdings
     // each time a match is found, the count is decreased, if at the end, the mission countdown is at 0,
@@ -43,20 +70,23 @@ public class Mission : MonoBehaviour
         if (c == 0)
         {
             // Mission Complete
-            Debug.Log("true, not marked completed in Debug Mode");
-            //isComplete = true;
+            // Debug.Log("true, not marked completed in Debug Mode");
+            isComplete = true;
+            gameObject.SetActive(false);
             
-            Debug.Log("In Debug, not removed right now.");
+            // Debug.Log("In Debug, not removed right now.");
             // Remove them from the player holding
-//            foreach (ObjectiveData objectiveData in ToRemoveFromPlayer)
-//            {
-//                FindObjectOfType<ObjectivesHeld>().Objectives.Remove(objectiveData);
-//            }
+            foreach (ObjectiveData objectiveData in ToRemoveFromPlayer)
+            {
+                FindObjectOfType<ObjectivesHeld>().Objectives.Remove(objectiveData);
+            }
+            
+            FindObjectOfType<ObjectivesHeld>().UpdateObjectivesVisual();
             return true;
         }
         else
         {
-            Debug.Log("false");
+            // Debug.Log("false");
             return false;
         }
     }
