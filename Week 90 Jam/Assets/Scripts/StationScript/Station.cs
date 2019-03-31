@@ -82,6 +82,13 @@ public abstract class Station : MonoBehaviour
             }
         }
     }
+    
+    public virtual void JustCheck()
+    {
+        IsFinished = true;
+        DoWorkResult();
+        Debug.Log("Recharging");
+    }
 
     //Runs when player is not working on it
     public virtual void DoIdleWork() { }
