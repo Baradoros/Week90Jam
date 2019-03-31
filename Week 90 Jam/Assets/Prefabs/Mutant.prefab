@@ -238,10 +238,7 @@ MonoBehaviour:
   StationMask:
     serializedVersion: 2
     m_Bits: 512
-  rb: {fileID: 8049209781490706154}
-  direction: {x: 0, y: 0, z: 0}
   speed: 10
-  velz: 0
 --- !u!114 &8049209781490706151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,4 +260,4 @@ MonoBehaviour:
   placementobj: {fileID: 8049209781393194243}
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256

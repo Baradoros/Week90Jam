@@ -7,44 +7,36 @@ public class MutantController : MonoBehaviour
     [Header("Which player is this?")]
     [SerializeField]
     private int playerNumber = 1;
-
-    [Header("Work Variables")]
+    [Space]
     public GameObject CollisionCube;
     public LayerMask StationMask;
     [Space]
-
-    public Rigidbody rb;
-    public Vector3 direction;
     public float speed;
-    public int velz;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        direction = new Vector3(0,0,0);
+
+    private Rigidbody rb;
+    private Vector3 direction;
+
+    private void Start() {
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-        float moveHorizontal = Input.GetAxisRaw("Horizontal" + playerNumber);
-        float moveVertical = -Input.GetAxisRaw("Vertical" + playerNumber);
-        direction = new Vector3(0,0,0);
-        direction = new Vector3(moveHorizontal, 0, moveVertical);
-        //LOOK
-        Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
+        // Movement
+        float moveHorizontal = Input.GetAxis("Horizontal" + playerNumber);
+        float moveVertical = -Input.GetAxis("Vertical" + playerNumber);
+        direction = new Vector3(moveHorizontal * speed, 0, moveVertical * speed);
 
         if (moveHorizontal != 0 || moveVertical != 0)
-            rb.transform.rotation = Quaternion.LookRotation(-movement);
-        if (Input.GetButtonDown("UP"))
-            Debug.Log("LOG");
+            rb.transform.rotation = Quaternion.LookRotation(-direction);
 
         //Do Work On Station
         if (Input.GetAxisRaw("Action" + playerNumber) > 0)
         {
             Station station = null;
 
+            // Get the first object collided with collision cube against StationMask
             foreach (GameObject collision in CollisionCube.GetComponent<CollisionCube>().CollidingGameObjects)
                 if ((StationMask.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer)
                 {
@@ -59,7 +51,10 @@ public class MutantController : MonoBehaviour
     }
     
 
-    void FixedUpdate(){
-        rb.transform.position += direction * speed * Time.deltaTime;
+    void FixedUpdate() {
+        // Always set velocity, never position. 
+        // Setting position will move the object while setting velocity will attempt to move it next frame if no collision would occur. 
+        // Setting position directly leads to collision bugs.
+        rb.velocity = direction;
     }
 }
