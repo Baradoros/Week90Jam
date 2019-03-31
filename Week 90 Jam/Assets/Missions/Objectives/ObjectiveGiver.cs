@@ -6,7 +6,9 @@ public class ObjectiveGiver : MonoBehaviour
 
     public void GiveObjectiveToPlayer()
     {
-        var player = FindObjectOfType<MutantController>();
+        if (objectiveToGive == null) return;
+        
+        MutantController player = FindObjectOfType<MutantController>();
         if (player != null)
         {
             player.GetComponent<ObjectivesHeld>().AddObjective(objectiveToGive);

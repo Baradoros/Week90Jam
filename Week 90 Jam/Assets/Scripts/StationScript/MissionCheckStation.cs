@@ -40,6 +40,8 @@ public class MissionCheckStation : Station
     {
         Mission[] missions = FindObjectsOfType<Mission>();
 
+        if (missions == null) return;
+
         foreach (Mission mission in missions)
         {
             mission.CompareObjectives_MissionToPlayer();
