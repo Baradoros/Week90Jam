@@ -232,13 +232,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb4be913629c4df9828c800a9b4cabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionCube: {fileID: 796812304148435043}
-  PlayerMask:
+  collisionCube: {fileID: 796812304148435043}
+  playerMask:
     serializedVersion: 2
     m_Bits: 1024
-  RechargeTime: 0
-  WorkTime: 0
-  Progress: 0
-  IsFinished: 0
-  HasWorkedThisFrame: 0
+  rechargeTime: 0
+  workTime: 0
+  progress: 0
+  isFinished: 0
+  hasWorkedThisFrame: 0
   isUsable: 1

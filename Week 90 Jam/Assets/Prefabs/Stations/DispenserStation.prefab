@@ -123,15 +123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1f97dc4adccee4991394a2fdafdf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionCube: {fileID: 3553403704562555042}
-  PlayerMask:
+  collisionCube: {fileID: 3553403704562555042}
+  playerMask:
     serializedVersion: 2
     m_Bits: 1024
-  RechargeTime: 1
-  WorkTime: 1
-  Progress: 0
-  IsFinished: 0
-  HasWorkedThisFrame: 0
+  rechargeTime: 0
+  workTime: 0
+  progress: 0
+  isFinished: 0
+  hasWorkedThisFrame: 0
   DispensingObject: {fileID: 0}
   DispenseDisplacement: {x: 0, y: 0, z: 0}
 --- !u!1 &3553403704562555042

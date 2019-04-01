@@ -335,6 +335,12 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!1 &395507470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8790069781687471271, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 824766757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &495697625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,6 +458,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3146326715710328173, guid: 4170bdfe482a548d6a86e0c0e1648aca,
         type: 3}
       propertyPath: Objectives.Array.size
@@ -475,18 +491,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 29c53fb3de454457aac49519dae9bf74,
         type: 2}
-    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4170bdfe482a548d6a86e0c0e1648aca, type: 3}
+--- !u!1 &639490416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8790069781687471271, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 3515587992080528177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &697334835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3553403704562555042, guid: ec3502970e3669a489917a8e59ddc08b,
+    type: 3}
+  m_PrefabInstance: {fileID: 9118965780124771555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &824766757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,6 +571,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: collisionCube
+      value: 
+      objectReference: {fileID: 395507470}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: rechargeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: workTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6562dfe56ed7ecc4988376a5d8108c10, type: 3}
@@ -991,6 +1029,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3146326715710328173, guid: 4170bdfe482a548d6a86e0c0e1648aca,
         type: 3}
       propertyPath: Objectives.Array.size
@@ -1002,18 +1050,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 29c53fb3de454457aac49519dae9bf74,
         type: 2}
-    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9004927320471216940, guid: 4170bdfe482a548d6a86e0c0e1648aca,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4170bdfe482a548d6a86e0c0e1648aca, type: 3}
+--- !u!1 &1597559263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 796812304148435043, guid: d5899cf67236540f89c8d3eb59bc21da,
+    type: 3}
+  m_PrefabInstance: {fileID: 8282754634927707105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1702810346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1222,11 @@ PrefabInstance:
       propertyPath: mask.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 8049209781490706154, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de9bfd4e71d2f4d863b9a20216e16c, type: 3}
 --- !u!1 &1784751924 stripped
@@ -1341,6 +1390,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: collisionCube
+      value: 
+      objectReference: {fileID: 639490416}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: rechargeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731618456641963035, guid: 6562dfe56ed7ecc4988376a5d8108c10,
+        type: 3}
+      propertyPath: workTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6562dfe56ed7ecc4988376a5d8108c10, type: 3}
 --- !u!1 &3515587992080528178 stripped
@@ -1429,6 +1493,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7142201792937351770, guid: d5899cf67236540f89c8d3eb59bc21da,
+        type: 3}
+      propertyPath: collisionCube
+      value: 
+      objectReference: {fileID: 1597559263}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5899cf67236540f89c8d3eb59bc21da, type: 3}
 --- !u!1001 &9118965780124771555
@@ -1509,5 +1578,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 121536882902646401, guid: 35a1ec9eb8fcce640af181d6de978270,
         type: 3}
+    - target: {fileID: 7845419194291491100, guid: ec3502970e3669a489917a8e59ddc08b,
+        type: 3}
+      propertyPath: collisionCube
+      value: 
+      objectReference: {fileID: 697334835}
+    - target: {fileID: 7845419194291491100, guid: ec3502970e3669a489917a8e59ddc08b,
+        type: 3}
+      propertyPath: rechargeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845419194291491100, guid: ec3502970e3669a489917a8e59ddc08b,
+        type: 3}
+      propertyPath: workTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec3502970e3669a489917a8e59ddc08b, type: 3}
