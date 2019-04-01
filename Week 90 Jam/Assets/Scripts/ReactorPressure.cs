@@ -14,15 +14,9 @@ public class ReactorPressure : MonoBehaviour
                 }
         set {
             // Ensure value is always 0 - 100
+            //This wasn't working, but I don't want to touch it either. I don't know enough about get and set.
             _pressure = Mathf.Clamp(value, 0, 100);
             isDecaying = false;
-
-            // If Delay() is already running, stop the current one before starting a new one
-            if (decayCountdownRuning) {
-                StopCoroutine(Delay());
-                decayCountdownRuning = false;
-            }
-            StartCoroutine(Delay());
         }
     }
 
@@ -30,36 +24,37 @@ public class ReactorPressure : MonoBehaviour
     public float decayRateInSeconds = 1.0f;
     public float delayBeforeDecayStartsInSeconds = 6.0f;
 
-    private bool decayCountdownRuning = true;
-    public bool isDecaying { get; private set; }
+    //private bool decayCountdownRuning = true;
+    private bool isPlaying; //This bool is to make sure the coroutine runs at all times, so we can avoid using update.
+    public bool isDecaying;
 
 
     void Start()
     {
         isDecaying = false;
-        pressure = 50;
+        isPlaying = true;
+        pressure = 5;
+        StartCoroutine(Decay());
     }
 
-    void Update()
+    IEnumerator Decay()
     {
-        if (isDecaying) {
-            StartCoroutine(Decay());
-        } else {
-            StopCoroutine(Decay());
+        while (isPlaying)
+        {
+            while (pressure != 0 && isDecaying == true)
+            {
+                _pressure--; // Sets backing field directly to avoid starting the delay all over again
+                yield return new WaitForSecondsRealtime(decayRateInSeconds);
+            }
+            while (pressure != 0 && isDecaying == false)
+            {
+                yield return new WaitForSecondsRealtime(delayBeforeDecayStartsInSeconds);
+                isDecaying = true;
+            }
+            while (pressure == 0)
+            {
+                yield return new WaitForSecondsRealtime(1.0f);
+            }
         }
-        
-    }
-
-    IEnumerator Decay() {
-        _pressure--; // Sets backing field directly to avoid starting the delay all over again
-        yield return new WaitForSeconds(decayRateInSeconds);
-        Decay();
-    }
-
-    IEnumerator Delay() {
-        decayCountdownRuning = true;
-        yield return new WaitForSeconds(delayBeforeDecayStartsInSeconds);
-        decayCountdownRuning = false;
-        isDecaying = true;
     }
 }
