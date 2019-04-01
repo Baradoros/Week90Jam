@@ -13,6 +13,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 5, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3553637716558740702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768541727456042689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a668a0def5ffaa4196c1e1b492e9264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: BLUEISO
 --- !u!1001 &7371347103110111774
 PrefabInstance:
   m_ObjectHideFlags: 0
