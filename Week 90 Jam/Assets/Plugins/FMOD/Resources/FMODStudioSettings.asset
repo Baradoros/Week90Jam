@@ -15,9 +15,9 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: /Users/seanlange/GameDev/Audio/Test_Ver2/Test_Ver2.fspro
-  SourceProjectPathUnformatted: /Users/seanlange/GameDev/Audio/Test_Ver2/Test_Ver2.fspro
-  SourceBankPathUnformatted: /Users/seanlange/GameDev/Audio/Test_Ver2/Build
+  sourceProjectPath: /Users/seanlange/GameDev/Games/Week90Jam/FMOD/Test_Ver2/Test_Ver2.fspro
+  SourceProjectPathUnformatted: /Users/seanlange/GameDev/Games/Week90Jam/FMOD/Test_Ver2/Test_Ver2.fspro
+  SourceBankPathUnformatted: /Users/seanlange/GameDev/Games/Week90Jam/FMOD/Test_Ver2/Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

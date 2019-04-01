@@ -182,12 +182,12 @@ PrefabInstance:
     - target: {fileID: 276015045655770639, guid: 7577e104992924f889830d7569ae94fb,
         type: 3}
       propertyPath: Event
-      value: event:/bensound-buddy
+      value: event:/Music/bensound-summer
       objectReference: {fileID: 0}
     - target: {fileID: 8864891925869785286, guid: 7577e104992924f889830d7569ae94fb,
         type: 3}
       propertyPath: testSFX
-      value: event:/Coin
+      value: event:/SFX/Coin
       objectReference: {fileID: 0}
     - target: {fileID: 4644704254063265486, guid: 7577e104992924f889830d7569ae94fb,
         type: 3}
