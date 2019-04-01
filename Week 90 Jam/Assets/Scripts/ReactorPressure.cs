@@ -24,7 +24,10 @@ public class ReactorPressure : MonoBehaviour
             StartCoroutine(Delay());
         }
     }
+
+    [Header("Pressure decays 1/sec")]
     public float decayRateInSeconds = 1.0f;
+    public float delayBeforeDecayStartsInSeconds = 6.0f;
 
     private bool decayCountdownRuning = true;
     public bool isDecaying { get; private set; }
@@ -54,7 +57,7 @@ public class ReactorPressure : MonoBehaviour
 
     IEnumerator Delay() {
         decayCountdownRuning = true;
-        yield return new WaitForSeconds(6.0f);
+        yield return new WaitForSeconds(delayBeforeDecayStartsInSeconds);
         decayCountdownRuning = false;
         isDecaying = true;
     }
