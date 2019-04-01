@@ -15,6 +15,7 @@ public class ReactorPressure : MonoBehaviour
         set {
             // Ensure value is always 0 - 100
             _pressure = Mathf.Clamp(value, 0, 100);
+            isDecaying = false;
 
             // If Delay() is already running, stop the current one before starting a new one
             if (decayCountdownRuning) {
