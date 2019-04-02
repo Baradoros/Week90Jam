@@ -72,7 +72,7 @@ public class MutantController : MonoBehaviour
                 }
 
             if (station != null && station.CheckRequirements())
-                station.DoWork();
+                station.DoAction();
         }
     }
     
