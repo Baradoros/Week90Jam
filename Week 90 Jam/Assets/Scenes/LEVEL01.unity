@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: playerNumber
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8049209781393194240, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.264
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de9bfd4e71d2f4d863b9a20216e16c, type: 3}
 --- !u!1 &216040661
@@ -278,29 +283,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 52.816, y: 0, z: 0}
---- !u!1 &334674595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8049209781393194243, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-    type: 3}
-  m_PrefabInstance: {fileID: 37702148}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &334674596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334674595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021292a80c81a408db04a79f252738f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  potentialHoldObject: {fileID: 0}
-  objectHeld: {fileID: 0}
 --- !u!1001 &612070376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -531,29 +513,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96f110d15b55f34a91146f3c4defaf6, type: 3}
---- !u!1 &1001241936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8049209781393194243, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1551066141}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1001241937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001241936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021292a80c81a408db04a79f252738f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  potentialHoldObject: {fileID: 0}
-  objectHeld: {fileID: 0}
 --- !u!1001 &1104021530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -899,29 +858,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96f110d15b55f34a91146f3c4defaf6, type: 3}
---- !u!1 &1469679456 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8049209781393194243, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1793946746}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1469679457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469679456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021292a80c81a408db04a79f252738f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  potentialHoldObject: {fileID: 0}
-  objectHeld: {fileID: 0}
 --- !u!1001 &1551066141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,6 +939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playerNumber
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049209781393194240, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.264
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de9bfd4e71d2f4d863b9a20216e16c, type: 3}
@@ -1157,6 +1098,11 @@ PrefabInstance:
       propertyPath: playerNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8049209781393194240, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.264
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de9bfd4e71d2f4d863b9a20216e16c, type: 3}
 --- !u!1001 &1808941269
@@ -1297,29 +1243,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222ac0c4c255f9b4bafcf74784966128, type: 3}
---- !u!1 &1978449660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8049209781393194243, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8049209780082549006}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1978449661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978449660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021292a80c81a408db04a79f252738f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  potentialHoldObject: {fileID: 0}
-  objectHeld: {fileID: 0}
 --- !u!1001 &7747914974301322999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1409,7 +1332,7 @@ PrefabInstance:
     - target: {fileID: 8049209781490706150, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.22
+      value: 1.116
       objectReference: {fileID: 0}
     - target: {fileID: 8049209781490706150, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
         type: 3}
@@ -1465,6 +1388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049209781393194240, guid: 73de9bfd4e71d2f4d863b9a20216e16c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.264
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73de9bfd4e71d2f4d863b9a20216e16c, type: 3}

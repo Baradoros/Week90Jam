@@ -8,7 +8,7 @@ public class MutantController : MonoBehaviour
     [SerializeField]
     private int playerNumber = 1;
     // controllerNumber indicates the controller the player is using. 0 indicates no player has possessed this Character.
-    private int controllerNumber = 0; 
+    private int controllerNumber = 0;
     [Space]
     private string horizontalInputString; // use this string 
     private string verticalInputString;
@@ -19,7 +19,8 @@ public class MutantController : MonoBehaviour
     public LayerMask StationMask;
     [Space]
     public float speed;
-
+    [Space]
+    private CarryObject carryObject;
 
     private Rigidbody rb;
     private Vector3 direction;
@@ -41,6 +42,13 @@ public class MutantController : MonoBehaviour
             actionInputString     = "Action" + controllerNumber;
             pickupInputString     = "Pickup" + controllerNumber;
         }
+
+        carryObject = GetComponentInChildren<CarryObject>();
+        if (carryObject == null)
+        {
+            Debug.LogError("No CarryObject script in childer for " + gameObject);
+        }
+
     }
 
     void Update()
@@ -59,7 +67,7 @@ public class MutantController : MonoBehaviour
             rb.transform.rotation = Quaternion.LookRotation(-direction);
 
         //Do Work On Station
-        if (Input.GetAxisRaw(actionInputString) > 0)
+        if (Input.GetButtonDown(actionInputString))
         {
             Station station = null;
 
@@ -73,6 +81,26 @@ public class MutantController : MonoBehaviour
 
             if (station != null && station.CheckRequirements())
                 station.DoAction();
+        }
+
+
+        if(Input.GetButtonDown(pickupInputString))
+        {
+            Debug.Log("Pickup pressed");
+            if (carryObject.objectHeld)
+            {
+            Debug.Log("dropping");
+                carryObject.DropUpObject(carryObject.objectHeld);
+                carryObject.objectHeld = null;
+            }
+
+            if (carryObject.potentialHoldObject != null)
+            {
+            Debug.Log("pickingup");
+                carryObject.PickUpObject(carryObject.potentialHoldObject);
+                carryObject.objectHeld = carryObject.potentialHoldObject;
+                carryObject.potentialHoldObject = null;
+            }
         }
     }
     

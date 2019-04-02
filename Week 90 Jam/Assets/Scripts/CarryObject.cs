@@ -6,24 +6,12 @@ public class CarryObject : MonoBehaviour
     public GameObject potentialHoldObject;
     public GameObject objectHeld;
 
-    private void Update()
-    {        
-        if (Input.GetKeyUp(KeyCode.B))
-        {
-            if (objectHeld)
-            {
-                DropUpObject(objectHeld);
-                objectHeld = null;
-            }
-            
-            if (potentialHoldObject != null)
-            {
-                PickUpObject(potentialHoldObject);
-                objectHeld = potentialHoldObject;
-                potentialHoldObject = null;
-            }
-        }
-    }
+
+    /*
+     * 
+     *      PICKUP UPDATE SCRIPT MOVED TO MUTANT CONTROLLER SCRIPT FOR PICKUP INPUT BINDING. (RAZ)
+     * 
+     */
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,13 +23,15 @@ public class CarryObject : MonoBehaviour
         potentialHoldObject = null;
     }
 
-    private void PickUpObject(GameObject gObj)
+    public void PickUpObject(GameObject gObj)
     {
         gObj.transform.parent = transform.parent.transform;
+        gObj.transform.position += new Vector3(0, 0.61f, 0);
     }
     
-    private void DropUpObject(GameObject gObj)
+    public void DropUpObject(GameObject gObj)
     {
         gObj.transform.parent = null;
+        gObj.transform.position -= new Vector3(0, 0.61f, 0);
     }
 }
