@@ -31,6 +31,13 @@ public abstract class Station : MonoBehaviour
             DoIdleWork();
     }
 
+    //Used purely to have hasWorkedThisFrame set to true
+    public void DoAction()
+    {
+        hasWorkedThisFrame = true;
+        DoWork();
+    }
+
     public virtual void DoWork()
     {
         if (!isFinished)
