@@ -8,6 +8,7 @@ public class MutantController : MonoBehaviour
     [SerializeField]
     private int playerNumber = 1;
     // controllerNumber indicates the controller the player is using. 0 indicates no player has possessed this Character.
+    [SerializeField]
     private int controllerNumber = 0;
     [Space]
     private string horizontalInputString; // use this string 
@@ -27,12 +28,12 @@ public class MutantController : MonoBehaviour
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
-        if(playerNumber > 0 && playerNumber <= 4)
+        if(controllerNumber == 0 && playerNumber > 0 && playerNumber <= 4)
         {
             controllerNumber = StaticPlayerControllerMapping.GetControllerNumberForPlayer(playerNumber);
         }
 
-        if(controllerNumber == 0)
+        if(controllerNumber == 0) // Still controller not set? then disable the game object as no player possess it
         {
             gameObject.SetActive(false); // hides the player if no player has possessed this player.
         } else 
