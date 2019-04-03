@@ -2,16 +2,10 @@
 
 public class CarryObject : MonoBehaviour
 {
-    public LayerMask pickupableLayer;
     public GameObject potentialHoldObject;
     public GameObject objectHeld;
-
-
-    /*
-     * 
-     *      PICKUP UPDATE SCRIPT MOVED TO MUTANT CONTROLLER SCRIPT FOR PICKUP INPUT BINDING. (RAZ)
-     * 
-     */
+    public Vector3 originalPos;
+    public bool isUsingGravity;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,13 +19,18 @@ public class CarryObject : MonoBehaviour
 
     public void PickUpObject(GameObject gObj)
     {
-        gObj.transform.parent = transform.parent.transform;
-        gObj.transform.position += new Vector3(0, 0.61f, 0);
+        originalPos = gObj.transform.position;
+        gObj.transform.parent = transform;
+        gObj.transform.localPosition = Vector3.zero;
     }
     
     public void DropUpObject(GameObject gObj)
     {
         gObj.transform.parent = null;
-        gObj.transform.position -= new Vector3(0, 0.61f, 0);
+        
+        if (isUsingGravity) return;
+        Vector3 newPos = gObj.transform.position;
+        newPos.y = originalPos.y;
+        gObj.transform.position = newPos;
     }
 }
